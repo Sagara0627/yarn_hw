@@ -1,0 +1,60 @@
+.access {
+    background-color: $gray;
+    padding-bottom: 70px;
+}
+
+.ac-wrap {
+    display: flex;
+    background-color: $brown;
+    margin-bottom: 70px;
+
+    @include sp {
+        flex-direction: column;
+        position: relative;
+    }
+}
+
+.address {
+    width: 40%;
+    height: 400px;
+    padding: 100px 200px 105px 105px;
+
+    @include sp {
+        order: 2;
+        height: 280px;
+        width: 100%;
+        padding: 0;
+        padding-left: 30px;
+    }
+    
+    .ad-desc {
+        font-size: 1.6rem;
+        color: #fff;
+        min-width: 230px;
+
+        h3 {
+            font-size: 2.4rem;
+            margin-bottom: 3rem;
+            color: $silver;
+            font-weight: bold;
+
+            @include sp {
+            }
+        }
+
+        p {
+        margin-bottom: 2.4rem;
+        line-height: 1.9rem;
+        }
+    }
+}
+
+.map {
+    width: 60%;
+    
+    @include sp {
+        order: 1;
+        height: 230px;
+        width: 100%;
+    }
+}

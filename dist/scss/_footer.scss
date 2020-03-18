@@ -1,0 +1,137 @@
+footer {
+    height: 340px;
+    color: #fff;
+    position: relative;
+    padding: 165px 0 65px;
+
+    .inner {
+        padding: 0;
+    }
+}
+
+.ft-wrap {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #70707036;
+    padding-top: 80px;
+
+    @include sp {
+        flex-direction: column;
+        position: relative;
+        padding: 0;
+    }
+}
+
+.sns {
+    display: flex;
+    height: 3.2rem;
+    width: 31%;
+
+    @include sp {
+        justify-content: space-between;
+        width: 100%;
+        order: 2;
+    }
+
+    p {
+        min-width: 26rem;
+        height: 3.2rem;
+        font-size: 3.2rem;
+        margin: 0;
+        color: #7070704D;
+    }
+
+    .icon {
+        display: flex;
+        justify-content: space-between;
+        width: 4rem;
+        font-size: 2rem;
+        line-height: 3.2rem;
+        margin-left: 30px;
+        color: black;
+    }
+}
+
+.btn {
+    width: 17%;
+    height: 3.2rem;    
+    border: 1px solid $navy;
+    box-shadow: 2px 2px $navy;
+
+    &:active {
+        transform: translate(1px,1px);
+        box-shadow: none;
+    }
+
+    @include sp {
+        width: 50%;
+        order: 1;
+        margin: 65px auto 85px;
+    }
+    
+    p {
+        color: $navy;
+        font-size: 1.8rem;
+        text-align: center;
+        line-height: 3.2rem;
+        margin: 0;
+    }
+}
+
+.resi {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
+    transform: translateX(-100%);
+
+    &.open {
+        transform: translateX(0);
+    }
+
+    .resi_content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 50%;
+    line-height: 2;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+    margin: 20vh auto;
+    }
+
+    span {
+        color: black;
+        font-size: 1.2rem;
+    }
+
+    .month, .date{
+        width: 2em;
+    }
+
+    .name {
+        width: 5em;
+    }
+
+    .mail {
+        width: 15em;
+    }
+
+    .sub {
+        text-align: center;
+        margin-top: 50px;
+
+        input {
+            width: 50%;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

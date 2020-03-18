@@ -1,0 +1,51 @@
+
+
+.m-content {
+    display: flex;
+    justify-content: space-between;
+
+    @include sp {
+        flex-direction: column;
+    }
+}
+
+.m-wrap {
+    width: 26%;
+
+    @include sp {
+        width: 100%;
+    }
+}
+
+.m-img {
+    margin: 0 auto;
+    height: auto;
+
+    img {
+        width: 100%;
+    }
+}
+
+.m-catch {
+    font-size: 3rem;
+    text-align: center;
+    padding: 35px 0;
+    margin: 0;
+    font-weight: bold;
+
+    @include sp {
+        text-align: left;
+        padding: 30px 0;
+    }
+}
+
+.m-text {
+    font-size: 1.6rem;
+    line-height: 2.0;
+}
+
+.m-cost {
+    margin: 3.5rem 0 7rem;
+    text-align: right;
+    font-size: 1.6rem;
+}

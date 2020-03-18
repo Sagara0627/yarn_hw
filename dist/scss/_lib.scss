@@ -1,0 +1,56 @@
+$navy:#707070;
+$gray: #A193861F;
+$brown: #A1938689;
+$silver: #00000038;
+
+
+
+@mixin sp {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+
+
+html {
+    font-size: 62.5%; 
+}
+
+body {
+    font-family: "Roboto Mono for Powerline"; 
+    line-height: 1.25;
+    width: 100%;
+    min-width: 1000px;
+
+    @include sp {
+        min-width: 0;
+    }
+}
+
+.title {
+    height: 24px;
+    font-size: 1.8rem;
+    letter-spacing: 5.4px;
+    color: $navy;
+
+    &:after {
+        display: inline-block;
+        content: "";
+        border-top: 1px solid $navy;
+        width: 5em;
+        margin-left: 2.25rem;
+        vertical-align: middle;
+    }   
+}
+
+.inner {
+    width: 100% - 7.9% * 2;
+    padding-top: 256px;
+    margin: 0 auto;
+
+    @include sp {
+        padding-top: 60px;
+    }
+}
+

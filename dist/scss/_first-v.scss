@@ -1,0 +1,77 @@
+.first-v {
+    height: 80rem;
+    width: 100%;
+    display: flex;
+
+    @include sp {
+        height: 60rem;
+    }
+
+    &-wrap {
+        width: 46%;
+        position: relative;
+
+        @include sp {
+            position: absolute;
+            width: 100%;
+        }
+    }
+
+    &-img {
+        width: 54%;
+        height: 80rem;
+
+        @include sp {
+            width: 100%;
+            height: 60rem;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+
+            @include sp {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.first-v-catch {
+    position: absolute;
+    min-width: 310px;
+    top: 50%;
+    left: 25%;
+
+    @include sp {
+        display: flex;
+        flex-direction: column;
+        transform: translate(0 , 250%);
+        z-index: 1;
+    }
+
+    .ja {
+        font-size: 38px;
+        margin: 0;
+
+        @include sp {
+            order: 2;
+            font-size: 2.3rem;
+            color: #fff;
+        }
+    }
+
+    .en {
+        font-size: 3.8rem;
+        letter-spacing: 0.38rem;
+        margin: 0;
+        
+        @include sp {
+            order: 1;
+            font-size: 2.8rem;
+            color: #fff;
+        }
+    }
+}
